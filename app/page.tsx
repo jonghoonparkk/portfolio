@@ -1,3 +1,5 @@
+"use client";  // 이 줄을 추가합니다.
+
 import { BlogPosts } from 'app/components/posts';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
