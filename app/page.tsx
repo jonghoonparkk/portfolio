@@ -1,14 +1,20 @@
 "use client";  // 이 줄을 추가합니다.
 
-import { BlogPosts } from 'app/components/posts';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 export default function Page() {
   const [points, setPoints] = useState<{ x: number; y: number; }[]>([]);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [blogPosts, setBlogPosts] = useState([]);
 
   useEffect(() => {
+    // Fetch blog posts from API
+    fetch('/api/blog')
+      .then((response) => response.json())
+      .then((data) => setBlogPosts(data))
+      .catch((error) => console.error('Error fetching blog posts:', error));
+
     // 텍스트를 점으로 변환
     const textPoints = [
       { x: 100, y: 100 },
@@ -40,7 +46,12 @@ export default function Page() {
         mode, which eases long coding sessions by reducing eye strain.`}
       </p>
       <div className="my-8">
-        <BlogPosts />
+        {blogPosts.map((post: any, index: number) => (
+          <div key={index}>
+            <h2>{post.metadata.title}</h2>
+            <p>{post.metadata.summary}</p>
+          </div>
+        ))}
       </div>
       <div className="relative h-96 w-full bg-gray-900">
         <svg width="800" height="600">
