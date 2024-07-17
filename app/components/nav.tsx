@@ -2,10 +2,10 @@ import Link from 'next/link'
 
 const navItems = {
   '/': {
-    name: 'home',
+    name: '홈',
   },
   '/blog': {
-    name: 'blog',
+    name: '전체 글',
   },
   'https://hpic-lab.github.io/': {
     name: 'hpic lab',
