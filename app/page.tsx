@@ -5,14 +5,31 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+        소개
       </h1>
+      <h3 className="mb-8 text-2xl font-semibold tracking-tighter">
+      Research Interests
+      </h3>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        {`AI hardware design and Digital PIM`}
+      </p>
+      <h3 className="mb-8 text-2xl font-semibold tracking-tighter">
+      Tape-out Schedule
+      </h3>
+      <p className="mb-4">
+        {``}
+      </p>
+      <h3 className="mb-8 text-2xl font-semibold tracking-tighter">
+      Details
+      </h3>
+      <p className="mb-4">
+        {`Currently pursuing a Bachelor's degree in the school of electrical engineering at Hanyang University, Ansan, South Korea. His research interests include artificial intelligence hardware design and Digital processing in memory (Digital PIM).`}
+      </p>
+      <h3 className="mb-8 text-2xl font-semibold tracking-tighter">
+      Email
+      </h3>
+      <p className="mb-4">
+        {`hoon765@hanyang.ac.kr`}
       </p>
       <div className="my-8">
         <BlogPosts />
