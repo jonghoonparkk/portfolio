@@ -7,7 +7,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
-
+import Head from 'next/head'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -53,7 +53,11 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <link rel="icon" sizes="32x32" href="/favicon.ico" />
+      <Head>
+        <link rel="icon" sizes="32x32" href="/favicon.ico" />
+        <title>My Portfolio</title>
+        <meta name="description" content="This is my portfolio." />
+      </Head>
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
