@@ -12,15 +12,15 @@ import Head from 'next/head'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'jonghoonparkk blog',
+    template: '%s | jonghoonparkk blog',
   },
-  description: 'This is my portfolio.',
+  description: 'This is my blog.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'My blog',
+    description: 'This is my blog.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'My blog',
     locale: 'en_US',
     type: 'website',
   },
