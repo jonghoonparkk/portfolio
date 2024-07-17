@@ -55,7 +55,7 @@ export default function RootLayout({
     >
       <Head>
         <link rel="icon" sizes="32x32" href="/favicon.ico" />
-        <title>My Portfolio</title>
+        <title>My Blog</title>
         <meta name="description" content="This is my portfolio." />
       </Head>
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
