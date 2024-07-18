@@ -32,16 +32,18 @@ function CustomLink(props) {
   if (href.startsWith('/')) {
     return (
       <Link href={href} {...props}>
-        {props.children}
+        <a className="transition-all hover:underline">
+          {props.children}
+        </a>
       </Link>
     )
   }
 
   if (href.startsWith('#')) {
-    return <a {...props} />
+    return <a className="transition-all hover:underline" {...props} />
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
+  return <a target="_blank" rel="noopener noreferrer" className="transition-all hover:underline" {...props} />
 }
 
 function RoundedImage(props) {
