@@ -18,7 +18,7 @@ export function BlogPosts() {
         .map((post) => (
           <Link
             key={post.slug}
-            className="flex flex-col space-y-1 mb-4 hover:underline" // HOVER 시에 UNDERLINE이 생기도록 추가된 부분
+            className="flex flex-col space-y-1 mb-4 hover:underline hover:decoration-neutral-400 dark:hover:decoration-neutral-600" // HOVER 시에 UNDERLINE과 밑줄 색상 설정
             href={`/blog/${post.slug}`}
           >
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
